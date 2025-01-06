@@ -69,3 +69,35 @@
 // console.log(banana);
 // console.log(strawberry);
 // console.log(rest);
+
+// 4) 전개 구문
+// let fruits1 = ["사과", "바나나", "딸기"];
+// let fruits2 = ["파인애플", "수박"];
+// let items = [...fruits1, ...fruits2];
+// console.log(items);
+
+// 5) Rest parameter
+// print("a", "b", "c", "d", "e", "f");
+
+// function print(...values) {
+//   values.forEach(function (value, index) {
+//     console.log("index: ", index, "value: ", value);
+//   });
+// }
+
+// 얕은 복사
+// let source = ["사과", "바나나", "딸기"];
+// let target = source;
+// target[0] = "파인애플";
+
+// console.log("source", source);
+// console.log("target", target);
+
+// 깊은 복사
+let source = ["사과", "바나나", "딸기"];
+// let target = [...source];
+// let target = Array.from(source);
+let target = source.slice();
+target[0] = "파인애플";
+console.log("source", source);
+console.log("target", target);
